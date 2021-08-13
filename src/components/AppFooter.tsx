@@ -1,7 +1,9 @@
 
 function AppFooter(): JSX.Element{
     return (
-
+        <section>
+            
+        </section>
     );
 }
 
