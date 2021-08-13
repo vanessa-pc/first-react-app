@@ -1,10 +1,5 @@
-
 function AppHeader(): JSX.Element {
-    return (
-        <section> 
-
-        </section>
-    );
+  return <section></section>;
 }
 
 export default AppHeader;

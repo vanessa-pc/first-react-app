@@ -1,5 +1,3 @@
-import logo from "../../images/logo.jpg"
-
 interface PlaceProps {
   title: string;
   placeName: string;
@@ -12,11 +10,11 @@ interface PlaceProps {
 function Place(props: PlaceProps): JSX.Element {
   return (
     <>
-      <img src={require('./images/{props.mainImage}.jpg').default}></img>
+      <img src={props.mainImage}></img>
       <h2>{props.title}</h2>
       <h3>
         {props.placeName}, {props.countryName} (
-        <a href="{props.locationLink}"> map link</a>){" "}
+        <a href={props.locationLink}>map link</a>)
       </h3>
       <p> {props.text} </p>
     </>
