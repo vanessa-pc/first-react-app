@@ -4,6 +4,8 @@
     margin: 0 auto;
     font-family: 'Spartan', sans-serif;
     color: #a95fcf; 
+    text-align: center;
+    background-color: #47ddff;
 }
 
 
@@ -15,5 +17,5 @@
 img {
     max-width: 50%;
     height: auto;
-    object-fit: contain;
+    /* object-fit: contain; */
 }
