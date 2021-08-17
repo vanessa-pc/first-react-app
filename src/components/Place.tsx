@@ -5,6 +5,7 @@ interface PlaceProps {
   mainImage: string; // maybe URL next
   locationLink: string; // maybe URL next
   text: string;
+  className: string
 }
 
 function Place(props: PlaceProps): JSX.Element {
