@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@200&display=swap');
+
+* {
+    margin: 0 auto;
+    font-family: 'Spartan', sans-serif;
+    color: #a95fcf; 
+}
+
+
+#footer {
+    background-color: #a834eb;
+    color: #40e389;
+}
+
+img {
+    max-width: 50%;
+    height: auto;
+    object-fit: contain;
+}
