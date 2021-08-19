@@ -12,7 +12,8 @@ const kyotoArray = [
     countryName: "Japan",
     mainImage: kyoto,
     locationLink: "https://www.google.com/maps/place/Kyoto,+Japan/@35.0978739,135.438682,10z/data=!3m1!4b1!4m5!3m4!1s0x6001a8d6cd3cc3f1:0xc0961d366bbb1d3d!8m2!3d35.011564!4d135.7681489",
-    text: "A set of stairs in a peaceful bamboo trail somewhere in Kyoto."
+    text: "A set of stairs in a peaceful bamboo trail somewhere in Kyoto.",
+    id: "kyoto"
   } 
 ];
 const seljalandsfossArray = [
@@ -22,7 +23,8 @@ const seljalandsfossArray = [
   countryName: "Iceland",
   mainImage: seljalandsfoss,
   locationLink: "https://www.google.com/maps/place/Seljalandsfoss,+Iceland/data=!4m2!3m1!1s0x48d71eade8ef2415:0xae01e6205209178d?sa=X&ved=2ahUKEwiTm5vFlq7yAhWjnFwKHSD7C28Q8gF6BAgYEAE",
-  text: "A beautiful waterfall located on the South Coast of Iceland"
+  text: "A beautiful waterfall located on the South Coast of Iceland",
+  id: "seljalandsfoss"
 }
 ]  
 const veniceBeachArray = [
@@ -32,7 +34,8 @@ const veniceBeachArray = [
   countryName: "USA",
   mainImage: veniceBeach,
   locationLink: "https://www.google.com/maps/@33.9874948,-118.4967346,13z",
-  text: "A beautiful sunset at the backdrop of palm trees down in Venice Beach"
+  text: "A beautiful sunset at the backdrop of palm trees down in Venice Beach",
+  id: "venice-beach"
 }
 ];
 const santoriniArray = [
@@ -42,27 +45,31 @@ const santoriniArray = [
   countryName: "Greece",
   mainImage: santorini,
   locationLink: "https://www.google.com/maps/@36.4203259,25.4234157,15z",
-  text: "A stairway with a panorama over the Aegean sea in Thera Santorini."
+  text: "A stairway with a panorama over the Aegean sea in Thera Santorini.",
+  id: "santorini"
 }
 ];
 
 function MainContent(): JSX.Element {
   return (
     <section>
+      <div id="kyoto">
       {kyotoArray.map(function (kyoto) {
         return (
-          <Place
-            key={kyoto.title}
-            title={kyoto.title}
-            placeName={kyoto.placeName}
-            countryName={kyoto.countryName}
-            mainImage={kyoto.mainImage}
-            locationLink={kyoto.locationLink}
-            text={kyoto.text}
-            className="Place"
-          />
+            <Place
+              key={kyoto.title}
+              title={kyoto.title}
+              placeName={kyoto.placeName}
+              countryName={kyoto.countryName}
+              mainImage={kyoto.mainImage}
+              locationLink={kyoto.locationLink}
+              text={kyoto.text}
+              className="Place"
+            />   
         );
       })};
+    </div>
+    <div id="seljalandsfoss">
       {seljalandsfossArray.map(function (seljalandsfoss){
         return (
           <Place
@@ -77,6 +84,8 @@ function MainContent(): JSX.Element {
           />
         );
       })};
+    </div> 
+    <div id="venice-beach">
       {veniceBeachArray.map(function (venice){
         return (
           <Place
@@ -91,6 +100,8 @@ function MainContent(): JSX.Element {
           />
         );
       })};
+    </div> 
+    <div id="santorini">
       {santoriniArray.map(function (santorini){
         return (
           <Place
@@ -105,6 +116,7 @@ function MainContent(): JSX.Element {
           />
         );
       })};
+    </div> 
     </section>
   );
 }
